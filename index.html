@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            margin: 0;
+        }
+
+        #cabeza {
+            margin: auto;
+            height: 289px;
+            width: 800px;
+            background-image: url(img/personajes_cabeza1.png);
+            background-size: 100%;
+        }
+
+        #nariz {
+            margin: auto;
+            height: 241px;
+            width: 800px;
+            background-image: url(img/personajes_nariz1.png);
+            background-size: 100%;
+        }
+
+        #boca {
+            margin: auto;
+            height: 274px;
+            width: 800px;
+            background-image: url(img/personajes_boca1.png);
+            background-size: 100%;
+        }
+    </style>
+    
+    <title></title>
+</head>
+
+<body>
+    <div id="cabeza" onclick="cam_cabeza()"></div>
+    <div id="nariz" onclick="cam_nariz()"></div>
+    <div id="boca" onclick="cam_boca()"></div>
+<script>
+        var num_cab=1;
+        var num_nar=1;
+        var num_boc=1;
+        function cam_cabeza(){
+            num_cab = num_cab + 1 ;
+            if (num_cab == 5){
+                num_cab=1;
+            }
+            document.getElementById("cabeza").style.backgroundImage = "url(img/personajes_cabeza"+ num_cab +".png)"
+        };
+        function cam_nariz(){
+            num_nar = num_nar + 1 ;
+            if (num_nar == 5){
+                num_nar=1;
+            }
+            document.getElementById("nariz").style.backgroundImage = "url(img/personajes_nariz"+ num_nar +".png)"
+        };
+        function cam_boca(){
+            num_boc = num_boc + 1 ;
+            if (num_boc == 5){
+                num_boc=1;
+            }
+            document.getElementById("boca").style.backgroundImage = "url(img/personajes_boca"+ num_boc +".png)"
+        };
+        
+    </script>
+</body>
+
+</html>
